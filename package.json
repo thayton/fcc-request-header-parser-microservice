@@ -1,0 +1,23 @@
+{
+    "name": "fcc-request-header-parser-microservice",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",        
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thayton/fcc-request-header-parser-microservice.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thayton/fcc-request-header-parser-microservice/issues"
+    },
+    "homepage": "https://github.com/thayton/fcc-request-header-parser-microservice#readme",
+    "dependencies": {
+        "express": "^4.16.3"
+    }
+}
