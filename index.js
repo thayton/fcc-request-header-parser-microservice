@@ -3,8 +3,13 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.get('/api/whoami', (req, res) => {
+    let ip = req.headers['x-forwarded-for'] || 
+        req.connection.remoteAddress        || 
+        req.socket.remoteAddress            ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    
     res.send({
-        'ipaddress': req.ip,
+        'ipaddress': ip,
         'language': req.headers['accept-language'],
         'software': req.headers['user-agent']
     });
